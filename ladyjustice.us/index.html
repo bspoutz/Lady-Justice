@@ -5,8 +5,76 @@
     
     <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+            
+    <style>
+    body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    
+    #flag {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+
+    }
+    
+    #shadow {
+      position: absolute;
+      right: 15%;
+      bottom: -12.5%;
+      z-index: 10;
+    }
+    
+    </style>
   </head> 
-  <body>
-      coming soon! LADYJUSTICE.US 
-  </body> 
+  <body >
+      
+      <img src="images/flag.png" alt="this slowpoke moves"  height="100%" alt="404 image"/ id="flag">
+
+          
+      <img src="images/test.png" alt="this slowpoke moves"  height="120%" alt="404 image"/ id="shadow">
+      
+      
+      <script>
+          
+          
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function demo() {
+        
+        while(true){
+            var i;
+            var skip = 2;
+            for (i = 32/skip; i < 54/skip; i++) {
+
+                document.getElementById("shadow").src = "shadow/"+ i * skip + ".png"
+                console.log("images/"+ i * skip + ".png");
+                await sleep(100 * skip);
+
+
+            }
+            document.getElementById("shadow").src = "shadow/54.png"
+
+            await sleep(2000);
+        }
+      
+    }
+
+          demo();
+          
+
+
+      </script>
+
+
+      
+  </body>
+  
+  
 </html> 
