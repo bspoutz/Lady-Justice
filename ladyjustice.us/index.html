@@ -11,7 +11,15 @@
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     }
-    
+    @media (orientation: portrait) {/*https://gist.github.com/visnup/2605440  */
+      body {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
     #flag {
         position: absolute;
         left: 0;
@@ -29,32 +37,165 @@
       z-index: 10;
     }
     
+
+    
+    .button {
+      background-color:rgb(123, 154, 154, 0);
+      color:rgb(123, 154, 154);
+      border: none;
+      padding: 5vh 10vh;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 3vh;
+      cursor: pointer;
+    }
+    .buttonGrey {
+      background-color:rgb(219, 216, 196,0);
+      border: none;
+      color: rgb(219, 216, 196);
+      padding: 5vh 10vh;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 3vh;
+      cursor: pointer;
+    }
+    .buttonCopper {
+      background-color:rgb(214, 162, 121, 0);
+      border: none;
+      color: rgb(214, 162, 121);
+      padding: 5vh 10vh;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 3vh;
+      cursor: pointer;
+    }
+    
+    #star1 {
+        position: absolute;
+        top: 54%;
+        left:0%;
+        z-index:50;
+        height:7%;
+        cursor: pointer;
+    }
+    
+    #star2 {
+        position: absolute;
+        top: 62%;
+        left:0%;
+        z-index:50;
+        height:7%;
+        cursor: pointer;
+    }
+    
+    #star3 {
+        position: absolute;
+        top: 69%;
+        left:0%;
+        z-index:50;
+        height:7%;
+        cursor: pointer;
+    }
+    
+    
+    #part1 {
+        position: absolute;
+        left: -1%;
+        top: 50%;
+    }
+    #part2 {
+        position: absolute;
+        left: -1%;
+        top: 58%;
+    }
+    #part3 {
+        position: absolute;
+        left: -1%;
+        top: 66%;
+    }
+    
+    #video {
+        position: absolute;
+        display: none;
+        left: 10%;
+        top: 10%;
+        width: 80%;
+        height: 80%;
+        z-index: -20;
+
+    }
+    
     </style>
   </head> 
-  <body >
+  <body  onclick="exitVideo();">
       
       <img src="images/flag.png" alt="this slowpoke moves"  height="100%" alt="404 image"/ id="flag">
 
           
-      <img src="images/test.png" alt="this slowpoke moves"  height="120%" alt="404 image"/ id="shadow">
+      <img src="shadow/32.png" alt="this slowpoke moves"  height="120%" alt="404 image"/ id="shadow">
+          
+      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star1" onclick="playVideo('https://www.youtube.com/embed/YYCBJzURfPQ?autoplay=1&rel=0')"/>
+      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star2" onclick="playVideo('https://www.youtube.com/embed/RzeZY57lUoU?autoplay=1&rel=0')"/>
+      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star3" onclick="playVideo('https://www.youtube.com/embed/KYFqCvFPwZM?autoplay=1&rel=0')"/>
+
+      <button class="button" id="part1" onclick="playVideo('https://www.youtube.com/embed/YYCBJzURfPQ?autoplay=1&rel=0')">Lady Liberty Finds Justice</button>
+      <button class="buttonGrey" id="part2"  onclick="playVideo('https://www.youtube.com/embed/RzeZY57lUoU?autoplay=1&rel=0')">Lady Liberty Gets Justice</button>
+      <button class="buttonCopper" id="part3" onclick="playVideo('https://www.youtube.com/embed/KYFqCvFPwZM?autoplay=1&rel=0')">Lady Justice Finds Home</button>
+
+
       
+      <iframe id="video"  src="https://www.youtube.com/embed/YYCBJzURfPQ"
+          allowfullscreen="allowfullscreen"
+      mozallowfullscreen="mozallowfullscreen"
+      msallowfullscreen="msallowfullscreen"
+      oallowfullscreen="oallowfullscreen"
+      webkitallowfullscreen="webkitallowfullscreen"></iframe>
       
       <script>
           
-          
+       
+       var started = false;
+       function playVideo(url){
+           
+           document.getElementById("video").src = url
+           document.getElementById("video").style.zIndex = "50";
+           document.getElementById("video").style.display="block";
+
+           started = true;
+
+           
+       }
+      
+      function exitVideo(){
+          if (started == false){
+          document.getElementById("video").src = ""
+
+          document.getElementById("video").style.zIndex = "-20";
+          document.getElementById("video").style.display="none";
+
+          } else {
+              started = false
+          }
+      }
+      
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+      var shots = 0;
     async function demo() {
         
         while(true){
+            
+            
             var i;
             var skip = 2;
             for (i = 32/skip; i < 54/skip; i++) {
 
                 document.getElementById("shadow").src = "shadow/"+ i * skip + ".png"
-                console.log("images/"+ i * skip + ".png");
                 await sleep(100 * skip);
 
 
@@ -62,6 +203,48 @@
             document.getElementById("shadow").src = "shadow/54.png"
 
             await sleep(2000);
+   
+
+            if (shots > 1) {
+                
+                
+                
+                var i;
+                var skip = 2;
+                for (i = 32/skip; i < 54/skip; i++) {
+
+                    document.getElementById("shadow").src = "GROW/00"+ i * skip + ".png"
+                    await sleep(100 * skip);
+
+
+                }
+                break;
+                /*
+                await sleep(4000);
+                for (i = 54/skip; i >= 32/skip; i--) {
+
+                    document.getElementById("shadow").src = "GROW/"+ i * skip + ".png"
+                    await sleep(100 * skip);
+
+                }
+                
+                 */
+                shots = 0;
+            } else {
+                shots +=1;
+            }
+
+         }
+        while (true){
+            var i;
+            var skip = 2;
+            for (i = 32/skip; i < 54/skip; i++) {
+
+                document.getElementById("shadow").src = "star/00"+ i * skip + ".png"
+                await sleep(100 * skip);
+
+
+            }
         }
       
     }
