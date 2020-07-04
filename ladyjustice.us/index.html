@@ -1,6 +1,7 @@
 
 <html> 
-  <head> 
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LADYJUSTICE.US</title>
     
     <meta charset="utf-8">
@@ -38,6 +39,8 @@
     }
     
     #textBox {
+     font-family: "Verdana";
+
       position: absolute;
       background-color: white ;
       right: 4%;
@@ -56,19 +59,22 @@
     
     #smaller {
         font-size: 2vh;
+ text-align: center;
+ font-family: "Verdana";
 
     }
 
     #textBox2 {
+        font-family: "Verdana";
+        text-align: center;
+
       position: absolute;
       background-color: white ;
       left: 2%;
       bottom: 4%;
-      height: 10%;
       width: 20%;
       z-index: 10;
-      border: 10px rgb(60,60,109) solid;
-      box-shadow: 10px 10px;
+      border: 2px rgb(0,0,0) solid;
       font-size: 2vh;
       overflow-y: none;
       overflow-x: none;
@@ -79,8 +85,11 @@
     
     
     .button {
+        font-family: "Verdana";
+        text-shadow: 2px 2px rgb(0,0,0);
+
       background-color:rgb(123, 154, 154, 0);
-      color:rgb(123, 154, 154);
+      color: red;
       border: none;
       padding: 5vh 10vh;
       text-align: center;
@@ -90,9 +99,12 @@
       cursor: pointer;
     }
     .buttonGrey {
+        font-family: "Verdana";
+        text-shadow: 2px 2px rgb(0,0,0);
+
       background-color:rgb(219, 216, 196,0);
       border: none;
-      color: rgb(219, 216, 196);
+      color: white;
       padding: 5vh 10vh;
       text-align: center;
       text-decoration: none;
@@ -101,9 +113,12 @@
       cursor: pointer;
     }
     .buttonCopper {
+        font-family: "Verdana";
+        text-shadow: 2px 2px rgb(0,0,0);
+
       background-color:rgb(214, 162, 121, 0);
       border: none;
-      color: rgb(214, 162, 121);
+      color: blue;
       padding: 5vh 10vh;
       text-align: center;
       text-decoration: none;
@@ -167,11 +182,21 @@
 
     }
     
-    p {text-align: center;
+    #title {text-align: center;
         font-weight: bolder;
     }
+    
+    #line {
+        text-align: center;
+        color: red;
+        font-size: 2vh;
+        height: 3vh;
+
+    }
+    
 
     </style>
+    
   </head> 
   <body  onclick="exitVideo();">
       
@@ -184,22 +209,24 @@
       <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star2" onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?autoplay=1&rel=0')"/>
       <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?autoplay=1&rel=0')"/>
 
-      <button class="button" id="part1" onclick="playVideo('https://www.youtube.com/embed/8CfWhme7jV8?autoplay=1&rel=0')">Lady Liberty Finds Justice</button>
-      <button class="buttonGrey" id="part2"  onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?autoplay=1&rel=0')">Lady Liberty Gets Justice</button>
-      <button class="buttonCopper" id="part3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?autoplay=1&rel=0')">Lady Justice Finds Home</button>
+      <button class="button" id="part1" onclick="playVideo('https://www.youtube.com/embed/8CfWhme7jV8?autoplay=1&rel=0')">Lady Liberty Finds Justice <i class="fa fa-video-camera"></i></button>
+      <button class="buttonGrey" id="part2"  onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?autoplay=1&rel=0')">Lady Liberty Gets Justice <i class="fa fa-video-camera"></i></button>
+      <button class="buttonCopper" id="part3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?autoplay=1&rel=0')">Lady Justice Finds Home <i class="fa fa-video-camera"></i></button>
 
       <div id="textBox2" >
-          Dedicated to building the Statue of Lady Justice on Alcatraz Island in San Francisco Bay!
+          Dedicated to building the Statue of Lady Justice on Alcatraz Island in <br>San Francisco Bay!
       </div>
       
 
       
       <div id="textBox" >
-          <p>LIBERTY AND JUSTICE FOR ALL!</p>
+      <div id="title">LIBERTY AND JUSTICE<br>FOR ALL!</div>
+       
+      <div id="line">_____________________</div>
        
        <div id="smaller">
-       Big Picture: We want your help to build the Statue of Lady Justice on Alcatraz Island.
-        <i style="font-weight: bolder">Please click on Lady Justice and enter your email! </i>
+           Big Picture: We want your help to build. The<br> Statue of Lady Justice on Alcatraz Island.
+        <i style="font-weight: bolder"><br>Please click on Lady Justice and enter your email! </i>
        <br>
        <br>
        </div >
@@ -214,11 +241,13 @@
       Imagine “Lady Justice” standing on Alcatraz Island, welcoming travelers as they pass under the famed Golden Gate Bridge into San Francisco Bay.  A shining beacon of optimism and hope for all those who have sought and continue to seek justice for all.  Framing the country from sea to shining sea in the two beliefs we hold dear to our hearts.
       Lady Justice… Blind to the bigotry of race. Blind to the bigotry of creed. Blind to the bigotry of birth and social position.
       <br> <br>
-      We need your help to make it happen!
+      We need your help to make it happen!<br>
        <br> <div style="font-weight: bolder">Click on the Statue of Lady Justice and enter your email.</div> <br> We will add you to the list of proud supporters dedicated to fulfilling the dream.  You will receive periodic updates as we move forward with the great task of building the Statue of Lady Justice!
       <br>
        
        <p>Thank You and God Bless America!</p>
+       <div id="line">_____________________</div>
+       <br>
 
       </div>
       
