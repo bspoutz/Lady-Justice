@@ -86,7 +86,7 @@
     
     .button {
         font-family: "Verdana";
-        text-shadow: 2px 2px rgb(0,0,0);
+        text-shadow: 0.21vh 0.21vh  rgb(0,0,0);
 
       background-color:rgb(123, 154, 154, 0);
       color: red;
@@ -97,10 +97,12 @@
       display: inline-block;
       font-size: 3vh;
       cursor: pointer;
+      z-index:100;
+
     }
     .buttonGrey {
         font-family: "Verdana";
-        text-shadow: 2px 2px rgb(0,0,0);
+        text-shadow: 0.21vh 0.21vh  rgb(0,0,0);
 
       background-color:rgb(219, 216, 196,0);
       border: none;
@@ -111,10 +113,12 @@
       display: inline-block;
       font-size: 3vh;
       cursor: pointer;
+      z-index:100;
+
     }
     .buttonCopper {
         font-family: "Verdana";
-        text-shadow: 2px 2px rgb(0,0,0);
+        text-shadow: 0.21vh 0.21vh  rgb(0,0,0);
 
       background-color:rgb(214, 162, 121, 0);
       border: none;
@@ -125,6 +129,8 @@
       display: inline-block;
       font-size: 3vh;
       cursor: pointer;
+      z-index:100;
+
     }
     
     #star1 {
@@ -265,7 +271,7 @@
        function playVideo(url){
            
            document.getElementById("video").src = url
-           document.getElementById("video").style.zIndex = "50";
+           document.getElementById("video").style.zIndex = "1000";
            document.getElementById("video").style.display="block";
 
            started = true;
