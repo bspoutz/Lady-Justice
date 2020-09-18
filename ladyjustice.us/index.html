@@ -274,12 +274,29 @@
         <div id="Count_container">
           Vistors:
         </div>
- <div class="counter" data-count="10000">1,000,000</div>
+ <div class="counter" id="count">0</div>
       
       
       
       <script>
+
           
+          
+          
+          function putToAmazon(){
+              //https://www.toptal.com/software/definitive-guide-to-datetime-manipulation
+              var date = new Date();
+              var timestamp = date.getTime();
+              
+              //https://www.geeksforgeeks.org/how-to-get-client-ip-address-using-javascript/
+              $.get("https://ipinfo.io", function(response) {
+                  console.log(timestamp)
+                  console.log(response)
+              }, "json")
+          }
+          
+          
+       putToAmazon()
        
        var started = false;
        function playVideo(url){
