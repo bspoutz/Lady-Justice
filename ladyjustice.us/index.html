@@ -86,6 +86,23 @@
       padding: 10px;
     }
     
+    #textBox3 {
+        font-family: "Verdana";
+
+         position: absolute;
+         background-color: white ;
+         left: 20%;
+         bottom: 8%;
+         height: 79%;
+         width: 60%;
+         z-index: 100;
+         border: 10px rgb(60,60,109) solid;
+         box-shadow: 10px 10px;
+         font-size: 4vh;
+         overflow-y: scroll;
+         overflow-x: none;
+         padding: 10px;
+    }
     
     
     
@@ -138,6 +155,23 @@
 
     }
     
+    .buttonGold {
+        font-family: "Verdana";
+        text-shadow: 0.21vh 0.21vh  rgb(0,0,0);
+
+      background-color:rgb(214, 162, 121, 0);
+      border: none;
+      color: gold;
+      padding: 5vh 10vh;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 3vh;
+      cursor: pointer;
+      z-index:100;
+
+    }
+    
     #star1 {
         position: absolute;
         top: 54%;
@@ -165,6 +199,15 @@
         cursor: pointer;
     }
     
+    #star4 {
+        position: absolute;
+        bottom: 0%;
+        left:30%;
+        z-index:50;
+        height:7%;
+        cursor: pointer;
+    }
+    
     
     #part1 {
         position: absolute;
@@ -180,6 +223,12 @@
         position: absolute;
         left: -1%;
         top: 66%;
+    }
+    
+    #part4 {
+        position: absolute;
+        left: 30%;
+        bottom: -3%;
     }
     
     #video {
@@ -205,77 +254,111 @@
 
     }
     
+    #clickBounds {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     </style>
     
   </head> 
-  <body  onclick="exitVideo();">
-      
-      <img src="images/flag.png" alt="this slowpoke moves"  height="100%" alt="404 image"/ id="flag">
+  <body>
+      <div onclick="exitVideo();" id="clickBounds">
+          <img src="images/flag.png" alt="this slowpoke moves"  height="100%" alt="404 image"/ id="flag">
+
+              
+          <img src="shadow/32.png" alt="this slowpoke moves"  height="120%" alt="404 image"/ id="shadow" onclick='window.location.href = "mailto:newsupporter@ladyjustice.us?subject=Support%20Building%20Lady%20Justice! &body=Please%20add%20my%20support%20to%20those%20who%20want%20justice,%20and%20to%20have%20Lady%20Justice%20built%20on%20Alcatraz%20Island%20in%20San%20Francisco%20Bay! "; '>
+              
+          <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star1" onclick="playVideo('https://www.youtube.com/embed/8CfWhme7jV8?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')"  frameborder="0" allowfullscreen/>
+          <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star2" onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')"/>
+          <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')"/>
+
+          <button class="button" id="part1" onclick="playVideo('https://www.youtube.com/embed/8CfWhme7jV8?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')">Lady Liberty Finds Justice <i class="fa fa-video-camera"></i></button>
+          <button class="buttonGrey" id="part2"  onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')">Lady Liberty Gets Justice <i class="fa fa-video-camera"></i></button>
+          <button class="buttonCopper" id="part3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')">Lady Justice Finds Home <i class="fa fa-video-camera"></i></button>
+
+          <div id="textBox2" >
+              Dedicated to building the Statue of Lady Justice on Alcatraz Island in <br>San Francisco Bay!
+          </div>
+          
 
           
-      <img src="shadow/32.png" alt="this slowpoke moves"  height="120%" alt="404 image"/ id="shadow" onclick='window.location.href = "mailto:newsupporter@ladyjustice.us?subject=Support%20Building%20Lady%20Justice! &body=Please%20add%20my%20support%20to%20those%20who%20want%20justice,%20and%20to%20have%20Lady%20Justice%20built%20on%20Alcatraz%20Island%20in%20San%20Francisco%20Bay! "; '>
+          <div id="textBox" >
+          <div id="title">LIBERTY AND JUSTICE<br>FOR ALL!</div>
+           
+          <div id="line">_____________________</div>
+           
+           <div id="smaller">
+               Big Picture: We want your help to build the<br> Statue of Lady Justice on Alcatraz Island.
+            <i style="font-weight: bolder"><br>Please click on Lady Justice and enter your email! </i>
+           <br>
+           <br>
+           </div >
+           Are there words more stirring, more fundamental to the American ideal? There is a reason schoolchildren learn and recite these words as they honor our flag.
+           <br> <br>
+          We fought to secure and protect our LIBERTY as a new country.  As citizens, we share in the benefits of that independence and self-determination.
+          But JUSTICE has been a harder battle to win for all. The struggle goes on, from century to century, decade to decade, and sadly still today.
+          <br> <br>
+
+          “Lady Liberty” has long stood in New York Harbor as a beacon of optimism and hope for all those who have sought liberty from oppression. It is time to honor the second part of the American promise.
+          <br> <br>
+          Imagine “Lady Justice” standing on Alcatraz Island, welcoming travelers as they pass under the famed Golden Gate Bridge into San Francisco Bay.  A shining beacon of optimism and hope for all those who have sought and continue to seek justice for all.  Framing the country from sea to shining sea in the two beliefs we hold dear to our hearts.
+          Lady Justice… Blind to the bigotry of race. Blind to the bigotry of creed. Blind to the bigotry of birth and social position.
+          <br> <br>
+          We need your help to make it happen!<br>
+           <br> <div style="font-weight: bolder">Click on the Statue of Lady Justice and enter your email.</div> <br> We will add you to the list of proud supporters dedicated to fulfilling the dream.  You will receive periodic updates as we move forward with the great task of building the Statue of Lady Justice!
+          <br>
+           
+           <p>Thank You and God Bless America!</p>
+           <div id="line">_____________________</div>
+           <br>
+
+          </div>
           
-      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star1" onclick="playVideo('https://www.youtube.com/embed/8CfWhme7jV8?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')"  frameborder="0" allowfullscreen/>
-      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star2" onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')"/>
-      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')"/>
+          <div id="textBox3" >
+              My Fellow Americans,
+              <br><br>
+              I've had a dream for years of a new <div style="font-weight: bolder">monument erected in the San Francisco Bay</div> - that monument would be the <div style="font-weight: bolder">Statue of Lady Justice!</div>
+              <br>
+              My name is Brian Spoutz, and I've lived in the Bay Area for nearly 40 years.  I am proud of the innovative technology produced in Silicon Valley.  But our country is still lacking - lacking Justice!
+              <br><br>
+              The 3 short videos presented on the home page, engineered by my friend Pascal Jardin, gives the 10,000 foot view of this provocative idea - that of erecting the  <div style="font-weight: bolder">Statue of Lady Justice</div> that is as magnificent and glorious as her 'twin' sister, the <div style="font-weight: bolder">Statue of Liberty!</div>
+              <br><br>
+              By placing this new monument in the SF Bay, on <div style="font-weight: bolder">Alcatraz Island</div> (what a juxtaposition!), will once again further the racial equality movements sweeping the United States.  And the <div style="font-weight: bolder">Statue of Lady Justice</div> would signal to our far east 'friends' that our technology is NOT your technology!  Countries will be put on notice that the US is your partner, not your innovator.
+              <br><br>
+              There are so many ideas that come to light when talking about building a new monument.  How about having The Boring Company (hello Elon Musk!) provide high speed access via tunnels under the bay to the new monument.  Or utilize the wealth of technology talent that exists in Silicon Valley!  Engineers from Apple, Google, Facebook, HP, IBM, and MORE, could strategize & develop something marvelous.
+              <br><br>
+              I have many other ideas surrounding this project, but for now we need to get someone to take an interest in this project, and also provide funding!   Frankly, I'd rather see the Statue of <div style="font-weight: bolder">Lady Justice</div> built instead of another single mile of southern border wall!   Many Americans feel the same way.
+              <br><br>
+              We, as a country, already agree.  Black Lives Matter!  Sensible immigration policy matters!   Racial equality matters!  Making sure Justice is not pushed aside for sake of expediency.  We no longer put up with racial equality.
+              <br><br>
+              Talk to your representative!  Spread the word through leaders that will take action and build the <div style="font-weight: bolder">Statue of Lady Justice!</div>
 
-      <button class="button" id="part1" onclick="playVideo('https://www.youtube.com/embed/8CfWhme7jV8?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')">Lady Liberty Finds Justice <i class="fa fa-video-camera"></i></button>
-      <button class="buttonGrey" id="part2"  onclick="playVideo('https://www.youtube.com/embed/8-5RxMq8CvI?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')">Lady Liberty Gets Justice <i class="fa fa-video-camera"></i></button>
-      <button class="buttonCopper" id="part3" onclick="playVideo('https://www.youtube.com/embed/dLudjlYjN10?list=PLzWrxIKW3sZQDBqTkyTk-7yqbbfnuMrci&autoplay=1&rel=0')">Lady Justice Finds Home <i class="fa fa-video-camera"></i></button>
-
-      <div id="textBox2" >
-          Dedicated to building the Statue of Lady Justice on Alcatraz Island in <br>San Francisco Bay!
-      </div>
+            </div>
+          
+          
+          <iframe id="video"  src="https://www.youtube.com/embed/YYCBJzURfPQ"
+              allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"></iframe>
+          
+          
+          
+            <div id="Count_container">
+              Vistors:
+            </div>
+     <div class="counter" id="count">0</div>
+          
+    </div>
       
-
+      <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star4" onclick="aboutUs();"/>
       
-      <div id="textBox" >
-      <div id="title">LIBERTY AND JUSTICE<br>FOR ALL!</div>
-       
-      <div id="line">_____________________</div>
-       
-       <div id="smaller">
-           Big Picture: We want your help to build the<br> Statue of Lady Justice on Alcatraz Island.
-        <i style="font-weight: bolder"><br>Please click on Lady Justice and enter your email! </i>
-       <br>
-       <br>
-       </div >
-       Are there words more stirring, more fundamental to the American ideal? There is a reason schoolchildren learn and recite these words as they honor our flag.
-       <br> <br>
-      We fought to secure and protect our LIBERTY as a new country.  As citizens, we share in the benefits of that independence and self-determination.
-      But JUSTICE has been a harder battle to win for all. The struggle goes on, from century to century, decade to decade, and sadly still today.
-      <br> <br>
-
-      “Lady Liberty” has long stood in New York Harbor as a beacon of optimism and hope for all those who have sought liberty from oppression. It is time to honor the second part of the American promise.
-      <br> <br>
-      Imagine “Lady Justice” standing on Alcatraz Island, welcoming travelers as they pass under the famed Golden Gate Bridge into San Francisco Bay.  A shining beacon of optimism and hope for all those who have sought and continue to seek justice for all.  Framing the country from sea to shining sea in the two beliefs we hold dear to our hearts.
-      Lady Justice… Blind to the bigotry of race. Blind to the bigotry of creed. Blind to the bigotry of birth and social position.
-      <br> <br>
-      We need your help to make it happen!<br>
-       <br> <div style="font-weight: bolder">Click on the Statue of Lady Justice and enter your email.</div> <br> We will add you to the list of proud supporters dedicated to fulfilling the dream.  You will receive periodic updates as we move forward with the great task of building the Statue of Lady Justice!
-      <br>
-       
-       <p>Thank You and God Bless America!</p>
-       <div id="line">_____________________</div>
-       <br>
-
-      </div>
-      
-      <iframe id="video"  src="https://www.youtube.com/embed/YYCBJzURfPQ"
-          allowfullscreen="allowfullscreen"
-      mozallowfullscreen="mozallowfullscreen"
-      msallowfullscreen="msallowfullscreen"
-      oallowfullscreen="oallowfullscreen"
-      webkitallowfullscreen="webkitallowfullscreen"></iframe>
-      
-      
-      
-        <div id="Count_container">
-          Vistors:
-        </div>
- <div class="counter" id="count">0</div>
-      
+      <button class="buttonGold" id="part4" onclick="aboutUs();">About Us</button>
       
       
       <script>
@@ -297,6 +380,10 @@
           
           
        putToAmazon()
+       document.getElementById("textBox3").style.zIndex = "-20";
+       document.getElementById("textBox3").hidden = true;
+
+       
        
        var started = false;
        function playVideo(url){
@@ -310,12 +397,24 @@
            
        }
       
+      function aboutUs(){
+          
+          document.getElementById("textBox3").style.zIndex = "100";
+          document.getElementById("textBox3").hidden = false;
+
+      }
+      
+      
       function exitVideo(){
+          document.getElementById("textBox3").style.zIndex = "-200";
+          document.getElementById("textBox3").hidden = true;
+
           if (started == false){
           document.getElementById("video").src = ""
 
           document.getElementById("video").style.zIndex = "-20";
           document.getElementById("video").style.display="none";
+
 
           } else {
               started = false
