@@ -41,6 +41,8 @@
       left: 20.5%;
       bottom: -12.5%;
       z-index: 10;
+      cursor: pointer;
+
     }
     
     #textBox {
@@ -318,26 +320,6 @@
 
           </div>
           
-          <div id="textBox3" >
-              My Fellow Americans,
-              <br><br>
-              I've had a dream for years of a new <div style="font-weight: bolder">monument erected in the San Francisco Bay</div> - that monument would be the <div style="font-weight: bolder">Statue of Lady Justice!</div>
-              <br>
-              My name is Brian Spoutz, and I've lived in the Bay Area for nearly 40 years.  I am proud of the innovative technology produced in Silicon Valley.  But our country is still lacking - lacking Justice!
-              <br><br>
-              The 3 short videos presented on the home page, engineered by my friend Pascal Jardin, gives the 10,000 foot view of this provocative idea - that of erecting the  <div style="font-weight: bolder">Statue of Lady Justice</div> that is as magnificent and glorious as her 'twin' sister, the <div style="font-weight: bolder">Statue of Liberty!</div>
-              <br><br>
-              By placing this new monument in the SF Bay, on <div style="font-weight: bolder">Alcatraz Island</div> (what a juxtaposition!), will once again further the racial equality movements sweeping the United States.  And the <div style="font-weight: bolder">Statue of Lady Justice</div> would signal to our far east 'friends' that our technology is NOT your technology!  Countries will be put on notice that the US is your partner, not your innovator.
-              <br><br>
-              There are so many ideas that come to light when talking about building a new monument.  How about having The Boring Company (hello Elon Musk!) provide high speed access via tunnels under the bay to the new monument.  Or utilize the wealth of technology talent that exists in Silicon Valley!  Engineers from Apple, Google, Facebook, HP, IBM, and MORE, could strategize & develop something marvelous.
-              <br><br>
-              I have many other ideas surrounding this project, but for now we need to get someone to take an interest in this project, and also provide funding!   Frankly, I'd rather see the Statue of <div style="font-weight: bolder">Lady Justice</div> built instead of another single mile of southern border wall!   Many Americans feel the same way.
-              <br><br>
-              We, as a country, already agree.  Black Lives Matter!  Sensible immigration policy matters!   Racial equality matters!  Making sure Justice is not pushed aside for sake of expediency.  We no longer put up with racial equality.
-              <br><br>
-              Talk to your representative!  Spread the word through leaders that will take action and build the <div style="font-weight: bolder">Statue of Lady Justice!</div>
-
-            </div>
           
           
           <iframe id="video"  src="https://www.youtube.com/embed/YYCBJzURfPQ"
@@ -355,6 +337,29 @@
      <div class="counter" id="count">0</div>
           
     </div>
+      
+      
+      <div id="textBox3" >
+          My Fellow Americans,
+          <br><br>
+          I've had a dream for years of a new <b>Monument erected in the San Francisco Bay</b> - that monument would be the <b>Statue of Lady Justice!</b>
+          <br><br>
+          My name is Brian Spoutz, and I've lived in the Bay Area for nearly 40 years.  I am proud of the innovative technology produced in Silicon Valley.  But our country is still lacking - lacking Justice!
+          <br><br>
+          The 3 short videos presented on the home page, engineered by my friend Pascal Jardin, gives the 10,000 foot view of this provocative idea - that of erecting the  <b>Statue of Lady Justice</b> that is as magnificent and glorious as her 'twin' sister, the <b>Statue of Liberty!</b>
+          <br><br>
+          By placing this new monument in the SF Bay, on <b>Alcatraz Island</b> (what a juxtaposition!), will once again further the racial equality movements sweeping the United States.  And the <b>Statue of Lady Justice</b> would signal to our far east 'friends' that our technology is NOT your technology!  Countries will be put on notice that the US is your partner, not your innovator.
+          <br><br>
+          There are so many ideas that come to light when talking about building a new monument.  How about having The Boring Company (hello Elon Musk!) provide high speed access via tunnels under the bay to the new monument.  Or utilize the wealth of technology talent that exists in Silicon Valley!  Engineers from Apple, Google, Facebook, HP, IBM, and MORE, could strategize & develop something marvelous.
+          <br><br>
+          I have many other ideas surrounding this project, but for now we need to get someone to take an interest in this project, and also provide funding!   Frankly, I'd rather see the <b>Statue of Lady Justice</b> built instead of another single mile of southern border wall!   Many Americans feel the same way.
+          <br><br>
+          We, as a country, already agree.  Black Lives Matter!  Sensible immigration policy matters!   Racial equality matters!  Making sure Justice is not pushed aside for sake of expediency.  We will no longer put up with racial inequality.
+          <br><br>
+          Talk to your representative!  Spread the word through leaders that will take action and build the <b>Statue of Lady Justice!</b>
+
+        </div>
+      
       
       <img src="images/star.png" alt="this slowpoke moves" alt="404 image" id ="star4" onclick="aboutUs();"/>
       
@@ -494,12 +499,19 @@
           demo();
           
 
-
+          $(document).keyup(function(e) {
+               if (e.key === "Escape") { // escape key maps to keycode `27`
+                   exitVideo()
+              }
+          });
+          
       </script>
 
 
       
   </body>
+  
+  
   
   
 </html> 
